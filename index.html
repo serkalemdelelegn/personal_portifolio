@@ -21,7 +21,7 @@
          font-weight: 600;
          font-size: 2em;
          margin-bottom: 20px;
-         color: #f9532d;
+         color: #DAA520;
      }
 
      p {
@@ -69,8 +69,8 @@
     <section class="container">
         <div class="main">
             <div class="detail">
-                <h3>Hi, It's Me</h3>
-                <h1>I'm <span style="color:#f9532d;">Serkalem</span></h1>
+                <h3><br>Hi, It's Me</h3>
+                <h1>I'm <span style="color:#DAA520;">Serkalem</span></h1>
                 <p>I'm a Web Developer. Our Main Goal is to help & satisfy the Local & Global Clients with web development solutions.</p>
                 <div class="social">
                     <a href="#" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
@@ -89,31 +89,48 @@
 
     <!-- About Us Section -->
     <section id="about" class="container">
-        <h2>About Us</h2>
+        <div class="main1">
+        <h2><br>About Us</h2>
         <p>At [Your Company Name], we are passionate about creating high-quality web solutions tailored to meet the needs of our clients. With a strong foundation in software engineering and a commitment to excellence, we strive to deliver innovative and effective web development services. Our team is dedicated to staying up-to-date with the latest technologies and trends, ensuring that our clients receive the best possible solutions to help them achieve their goals.</p>
         <p>We believe in the power of collaboration and work closely with our clients to understand their unique requirements. Whether you're looking for a new website, an e-commerce platform, or custom web applications, we have the expertise to bring your vision to life.</p>
         <p>Let’s work together to create something amazing!</p>
+        </div>
+    
+    </section>
+    <section id="skills" class="container">
+        <div class="main2">
+            <h2><br>Skills</h2>
+            <p></p>
+        </div>
     </section>
 
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-        if (isDarkMode) {
-            body.classList.add('dark-mode');
-            darkModeToggle.checked = true;
-        }
-        darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-    </script>
 
+
+
+
+
+<script src="./script.js" ></script>
 </body>
+
+
+
+
+
+
+
+<footer class="container">
+    <div class="page-footer">
+        <ul>
+            <li><a href="#" class="active" style="--navAni:1">Home</a></li>
+            <li><a href="#about" style="--navAni:2">About</a></li>
+            <li><a href="#" style="--navAni:3">Skills</a></li>
+            <li><a href="#" style="--navAni:4">Portfolio</a></li>
+            <li><a href="#" style="--navAni:5">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+
+
 
 </html>
