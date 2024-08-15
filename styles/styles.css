@@ -527,9 +527,3 @@ footer {
         gap: 0.6rem;
     }
 }
-@media (max-width: 400px){
-    body{
-        background-color: yellow;
-
-}
-}
