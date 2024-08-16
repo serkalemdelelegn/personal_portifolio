@@ -478,6 +478,9 @@ footer {
     opacity: 0.7;
 }
 
+
+
+
 /* Dark Mode Styles */
 .dark-mode footer {
     background: var(--primary-dark);
@@ -527,11 +530,93 @@ footer {
         gap: 0.6rem;
     }
 }
-/* .skills-section {
+/*about css*/
+
+:root {
+    --primary-color: #DAA520;
+    --primary-dark: #1F252E;
+    --text-color-light: #1F252E; /* Text color for light mode */
+    --text-color-dark: #ffffff; /* Text color for dark mode */
+    --background-color-light: #ffffff; /* Background color for light mode */
+    --background-color-dark: var(--primary-dark); /* Background color for dark mode */
+  }
+  
+  .about-section {
     padding: 60px 20px;
-    background-color: #222; 
+    background-color: var(--background-color-light); /* Light mode by default */
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .about-photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+  }
+  
+  .about-content h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    line-height: 1.7;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #b8860b;
+  }
+  
+  .dark-mode .about-section {
+    background-color: var(--background-color-dark); /* Dark mode background */
+    color: var(--text-color-dark); /* Dark mode text */
+  }
+  
+  .dark-mode .about-content h2 {
+    color: var(--primary-color); /* Keep heading in primary color */
+  }
+  
+  .dark-mode .download-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .about-photo img {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+.skills-section {
+    padding: 60px 20px;
     color: #fff; 
-  } */
+  }
   
   .skills-section h1 {
     font-size: 2.5em;
@@ -543,19 +628,27 @@ footer {
   .skills-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   
   .skill {
-    width: 100%;
-    max-width: 300px;
+    flex: 1 1 calc(33.333% - 40px); /* Adjust the width for a three-column layout */
     margin: 20px;
+    background-color: #333; /* Slightly lighter background for skill boxes */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
   }
   
   .skill h3 {
     font-size: 1.8em;
-    color: #DAA520; /* Golden color for headers */
+    color: #DAA520;
     margin-bottom: 15px;
   }
   
@@ -566,6 +659,20 @@ footer {
   
   .skill ul li {
     font-size: 1.2em;
-    margin-bottom: 10px;/* Light gray color for skill items */
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .skill {
+      flex: 1 1 calc(50% - 40px); /* Two-column layout for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skill {
+      flex: 1 1 100%; /* Single-column layout for mobile devices */
+    }
   }
   
