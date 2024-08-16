@@ -613,14 +613,27 @@ footer {
   }
   
 
-.skills-section {
+  :root {
+    --primary-color: #DAA520;
+    --primary-dark: #1F252E;
+    --background-color-light: #ffffff; /* Background color for light mode */
+    --background-color-dark: var(--primary-dark); /* Background color for dark mode */
+    --skill-bg-light: #f7f7f7; /* Light background color for skill section */
+    --skill-bg-dark: #1e232b; /* Dark background color for skill section */
+    --text-color-light: #333;
+    --text-color-dark: #fff;
+  }
+  
+  .skills-section {
     padding: 60px 20px;
-    color: #fff; 
+    background-color: var(--background-color-light); /* Default light mode background */
+    color: var(--text-color-light); /* Default light mode text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .skills-section h1 {
     font-size: 2.5em;
-    color: #DAA520; /* Primary golden color */
+    color: var(--primary-color); /* Primary golden color */
     text-align: center;
     margin-bottom: 40px;
   }
@@ -634,12 +647,13 @@ footer {
   .skill {
     flex: 1 1 calc(33.333% - 40px); /* Adjust the width for a three-column layout */
     margin: 20px;
-    background-color: #333; /* Slightly lighter background for skill boxes */
+    background-color: var(--skill-bg-light); /* Default light mode background for skill boxes */
+    color: var(--text-color-light); /* Default light mode text color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   }
   
   .skill:hover {
@@ -648,7 +662,7 @@ footer {
   
   .skill h3 {
     font-size: 1.8em;
-    color: #DAA520;
+    color: var(--primary-color);
     margin-bottom: 15px;
   }
   
@@ -660,7 +674,22 @@ footer {
   .skill ul li {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #ccc;
+    color: #666; /* Adjusted color for better contrast in light mode */
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode .skills-section {
+    background-color: var(--background-color-dark); /* Dark mode background */
+    color: var(--text-color-dark); /* Dark mode text color */
+  }
+  
+  .dark-mode .skill {
+    background-color: var(--skill-bg-dark); /* Dark mode background for skill boxes */
+    color: var(--text-color-dark); /* Dark mode text color */
+  }
+  
+  .dark-mode .skill ul li {
+    color: var(--text-color-dark); /* Ensure list items are visible in dark mode */
   }
   
   /* Responsive Adjustments */
