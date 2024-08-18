@@ -212,22 +212,40 @@
     </section>
     
       
-      
+      <!--contact us section-->
     <section id="contact" class="container">
         <div class="contact-header">
             <h2>Contact Us</h2>
-            <p>I'd love to hear from you! Please reach out if you have any questions, comments, or just want to connect.</p>
+            <p>Please feel free to reach out to me by filling out the form below or using the contact information provided.</p>
         </div>
 
         <div class="contact-content">
+            <div class="contact-form">
+                <h3>Leave a Comment</h3>
+                <form id="contact-form" action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="5" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+                
+            </div>
+
             <div class="contact-info">
                 <h3>Contact Information</h3>
-                <ul>
-                    <li><strong>Email:</strong> serkalem.delegn@example.com</li>
-                    <li><strong>Phone:</strong> +251-123-456-789</li>
-                    <li><strong>Address:</strong> Arba Minch, Ethiopia</li>
-                </ul>
+                <p>
+                    <strong>Email:</strong> serkalem.delegn@example.com<br>
+                    <strong>Phone:</strong> +251-123-456-789<br>
+                    <strong>Address:</strong> Arba Minch, Ethiopia
+                </p>
             </div>
+        </div>
 
             <div class="location">
                 <h3>Our Location</h3>
@@ -249,6 +267,9 @@
 
 
 <script src="./script/script.js" ></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="js/email.js"></script>
+
 </body>
 
 
