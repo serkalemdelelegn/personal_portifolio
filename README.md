@@ -69,5 +69,5 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 Feel free to reach out to me:
 - **Email**: serkalemhailu16@gmail.com
-- **Phone**: [Your Phone Number]
-- **Location**: Ethiopia
+- **Phone**: +251962042225
+- **Location**: Addis Abeba, Ethiopia
